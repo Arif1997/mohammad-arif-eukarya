@@ -1,3 +1,4 @@
+import { WeatherState } from "../interfaces";
 const map_api_key = import.meta.env.VITE_GOOGLE_MAP_API_KEY;
 export const getCityFromCoordinates = async (
   lat: number,
@@ -26,15 +27,16 @@ const open_wheather_api_id = import.meta.env.VITE_OPEN_WHEATHER_APIA_ID;
 export const getWeatherData = async (
   lat: number,
   lon: number
-): Promise<JSON | string> => {
+): Promise<WeatherState | null> => {
   const openWheatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${open_wheather_api_id}`;
 
   try {
     const response = await fetch(openWheatherURL);
     const data = await response.json();
+    console.log(data);
     return data;
   } catch (error) {
     console.error("Error:", error);
-    return "Unknown";
+    return null;
   }
 };

@@ -4,7 +4,11 @@ export default function WheatherIcon() {
       <img
         src="images/sunny.png"
         alt="sunny"
-        style={{ width: "500px", height: "100px" }}
+        style={{
+          width: "30px",
+          height: "30px",
+          margin: "auto auto auto 20px",
+        }}
       />
     </>
   );

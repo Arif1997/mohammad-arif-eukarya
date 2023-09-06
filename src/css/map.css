@@ -7,16 +7,20 @@
 .weather__wedget {
   text-align: left;
   width: 250px;
-  background-color: rgb(70, 70, 70);
+  height: 380px;
+  background-image: url("https://png.pngtree.com/thumb_back/fh260/back_our/20190625/ourmid/pngtree-blue-arc-weather-background-image_253195.jpg");
+  border: 2px solid darkgray;
   border-radius: 5px;
-  height: 400px;
   padding: 10px;
-  color: white;
+  color: black;
   margin: 0 0 0 20px;
 }
 
+.weather__wedget button {
+  background-color: #ff1818;
+}
 .toggle__map {
-  width: 100px;
-  height: 70px;
+  width: 90px;
+  height: 60px;
   background-color: red;
 }
