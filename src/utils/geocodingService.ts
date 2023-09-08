@@ -1,4 +1,5 @@
-import { WeatherState } from "../interfaces";
+import { allIndianCities } from "../data/indian-cities";
+import { WeatherData, WeatherState } from "../interfaces";
 const map_api_key = import.meta.env.VITE_GOOGLE_MAP_API_KEY;
 export const getCityFromCoordinates = async (
   lat: number,
@@ -33,10 +34,26 @@ export const getWeatherData = async (
   try {
     const response = await fetch(openWheatherURL);
     const data = await response.json();
-    console.log(data);
     return data;
   } catch (error) {
     console.error("Error:", error);
     return null;
   }
+};
+const weath: WeatherData[] = [];
+export const getWeatherDataForAllCities = async () => {
+  allIndianCities.slice(0, 100).map(async (city) => {
+    const openWheatherURL = `http://api.weatherapi.com/v1/current.json?key=0c8d18d7b38c4112bcb165551230609&q=${city.name}&aqi=no`;
+
+    try {
+      const response = await fetch(openWheatherURL);
+      const data = await response.json();
+      weath.push(data);
+      return data;
+    } catch (error) {
+      console.error("Error:", error);
+      return null;
+    }
+  });
+  return weath;
 };

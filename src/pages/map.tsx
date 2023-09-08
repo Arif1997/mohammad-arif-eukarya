@@ -70,7 +70,7 @@ export default function Map() {
         >
           views
         </button>
-        <div style={{ flex: 1 }}>
+        <div style={{ flex: 1 }} className="map__display__widget">
           <GoogleMapReact
             bootstrapURLKeys={{
               key: `${import.meta.env.VITE_GOOGLE_MAP_API_KEY}`,
