@@ -25,3 +25,21 @@ If you are developing a production application, we recommend updating the config
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+# About this project
+
+- This is an application that use google-map-react to add feature on top of the google map api and display weather based on the user clicks.
+
+# Getting started
+
+- Step 1: Run the following command on the terminal
+- git clone https://github.com/Arif1997/mohammad-arif-eukarya.git
+
+- Step 2: Run
+- cd mohammad-arif-eukarya
+
+- Step 3: Run
+- npm install
+
+- Step 4: Run the following command to run the project
+- npm run dev
